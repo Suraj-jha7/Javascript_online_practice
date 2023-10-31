@@ -9,6 +9,9 @@ var  getData= ()=>{
     })
 
     console.log(output);
+
+
+    nivbnao();
     
 }
 
@@ -25,3 +28,13 @@ var datas=[
 ]
 
 putdata(getData);
+
+
+
+function nivbnao(){
+
+
+    struturebnao();
+}
+
+
