@@ -34,7 +34,7 @@ putdata(getData);
 function nivbnao(){
 
 
-    struturebnao();
+    // struturebnao();
 }
 
 

@@ -2,7 +2,7 @@
 function getData(){
 
     setTimeout(()=>{
-        let output="";
+        var output="";
 
         datas.forEach((data,index)=>{
             output+=data.name+" ";
@@ -20,6 +20,5 @@ let datas=[
 },
 {name:"mayank",profession:"engineer"}
 ]
-
 
 getData();

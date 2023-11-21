@@ -10,7 +10,7 @@ var  getData= ()=>{
         })
     
         console.log(output);
-    },1000)
+    },3000)
    
     
 }
@@ -24,8 +24,8 @@ var putdata=()=>{
         setTimeout(()=>{
             datas.push({name:"amitabh",profession:"engineer"});
            
-        },1000)
-        let error=true;
+        },3000)
+        let error=false;
         if(!error)
         {
             resolve();
@@ -47,3 +47,6 @@ var datas=[
 putdata()
 .then(getData)
 .catch(err=>{console.log(err)});
+
+
+getData();
