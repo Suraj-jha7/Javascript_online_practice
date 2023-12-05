@@ -1,15 +1,53 @@
-#card-container{
-    display: flex;
-    flex-direction: row;
-}
-
-.card img{
-    
-    height: 200px;
-    width: 200px;
-}
-
-.card{
-    margin: 15px;
+#cart-container{
+    height: 70%;
+    width: 70%;
+    position: fixed;
+    top:20%;
+    right: 15%;
+    display: none;
+    background-color: aliceblue;
+    overflow: scroll;
 }
  
+
+.cartshow{
+    display:flex !important;
+    border:2px solid red;
+}
+
+.navbar{
+    position: fixed;
+    top:3px;
+    z-index: 1;
+    background-color: black;
+    color: rgb(240, 39, 39);
+    width: 100%;
+    
+}
+
+.container-fluid{
+    align-items: center;
+    justify-content: space-between;
+}
+
+#card-container{
+border:2px solid blue;
+margin-top:30px;
+position: fixed;
+overflow: auto;
+height: 100%;
+width: 100%;
+margin-bottom: 500px;
+padding-bottom: 300px;
+}
+
+
+#closedButton
+{
+    height: 30px;
+    width: 30px;
+    background-color: brown;
+    position: fixed;
+    top:1px;
+    right:1px;
+}
