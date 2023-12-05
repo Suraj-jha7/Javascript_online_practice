@@ -5,7 +5,9 @@ const cartContainer=document.querySelector("#cart-container");
 const cartButton=document.querySelector(".cartbutton");
 var cart=[];
 const cartshow=document.querySelector(".cartshow");
+const hide=document.querySelector(".hide");
 let querydata="";
+let flag=false;
 
 function arrayRemove(arr, value) {
     return arr.filter(function (geeks) {
@@ -86,9 +88,15 @@ function cardRender(result)
         cardContainer.insertAdjacentHTML("beforeend",resultBody);
 }
 
+
+
+
 cartButton.addEventListener('click',function(){
-    cartContainer.classList.toggle("cartshow");
+  cartContainer.classList.toggle("cartshow");
+    flag=true;
+    console.log("flag is true888888....");
     fetchCartArray(cart);
+    
 })
 
 
@@ -96,7 +104,7 @@ function fetchCartArray(cart)
 {
   cartContainer.innerHTML="";
    cart.forEach((id)=>{
-    console.log("id is :--",id);
+    // console.log("id is :--",id);
     getCartData(id);
    })
 }
@@ -104,7 +112,7 @@ function fetchCartArray(cart)
 async function getCartData(id){
     const response = await fetch(`https://dummyjson.com/products/${id}`);
     const result= await response.json();
-    console.log("cart value is ",result.id);
+    // console.log("cart value is ",result.id);
     cartRender(result);
   }
 
@@ -121,7 +129,23 @@ function cartRender(result)
   </div>
   </div>`
          cartContainer.insertAdjacentHTML("beforeend",resultBody);
+        // cartContainer.appendChild(resultBody);
 }
+
+
+
+
+
+document.querySelector(".cardContainer").addEventListener('click',function(){
+
+  if(flag)
+  {
+  cartContainer.classList.toggle("hide");
+  console.log("hide class added......")
+  flag=false;
+  }
+  
+});
 
 
 
