@@ -1,7 +1,30 @@
 .btndiv{
-   margin-left:30%;
-   border:2px solid grey;
    
+   border:2px solid grey;
+    border-radius: 5px;
+    align-items: center;
+   }
 
+   .red{
+      background-color: red;
 
-}
+   }
+
+   .green{
+      background-color: green;
+      
+   }
+
+   .blue{
+      background-color: blue;
+      
+   }
+   .black{
+      background-color: black;
+      
+   }
+   .white
+   {
+      background-color: white;
+      
+   }
